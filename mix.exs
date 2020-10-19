@@ -59,6 +59,11 @@ defmodule PropCheck.Mixfile do
       parallel_test: ["test --include concurrency_test --only concurrency_test"],
       test_parallel: ["test --include concurrency_test --only concurrency_test"],
       tests: ["test_ext", "test"],
+      lint: [
+        "credo --strict",
+        "hex.audit",
+        "dialyzer"
+      ]
     ]
   end
 
